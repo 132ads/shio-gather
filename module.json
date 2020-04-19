@@ -1,8 +1,8 @@
 {
     "name": "Gathering",
     "options": {
-        "niceName": "GatheringDisplay",
-        "guiName": "GatheringDisplay",
+        "niceName": "Shio-Gather",
+        "guiName": "Shio-Gather",
         "settingsFile": "config.json",
         "settingsVersion": 3
     },
