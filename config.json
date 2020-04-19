@@ -1,0 +1,89 @@
+{
+    "version": 3,
+    "data": {
+        "enabled": true,
+        "sendToAlert": true,
+        "markerId": 88704,
+        "plants": [
+            {
+                "id": 2,
+                "name": "植物",
+                "msg": "Wild Cobseed"
+            },
+            {
+                "id": 3,
+                "name": "植物",
+                "msg": "Wild Veridia"
+            },
+            {
+                "id": 4,
+                "name": "植物",
+                "msg": "Orange Mushroom"
+            },
+            {
+                "id": 5,
+                "name": "植物",
+                "msg": "Moongourd"
+            },
+            {
+                "id": 6,
+                "name": "植物",
+                "msg": "Apple Tree"
+            }
+        ],
+        "mining": [
+            {
+                "id": 102,
+                "name": "矿石",
+                "msg": "Cobala Ore"
+            },
+            {
+                "id": 103,
+                "name": "矿石",
+                "msg": "Shadmetal Ore"
+            },
+            {
+                "id": 104,
+                "name": "矿石",
+                "msg": "Xermetal Ore"
+            },
+            {
+                "id": 105,
+                "name": "矿石",
+                "msg": "Normetal Ore"
+            },
+            {
+                "id": 106,
+                "name": "矿石",
+                "msg": "Galborne Ore"
+            }
+        ],
+        "energy": [
+            {
+                "id": 202,
+                "name": "精气",
+                "msg": "Crimson Essence"
+            },
+            {
+                "id": 203,
+                "name": "精气",
+                "msg": "Earth Essence"
+            },
+            {
+                "id": 204,
+                "name": "精气",
+                "msg": "Azure Essence"
+            },
+            {
+                "id": 205,
+                "name": "精气",
+                "msg": "Opal Essence"
+            },
+            {
+                "id": 206,
+                "name": "精气",
+                "msg": "Obsidian Essence"
+            }
+        ]
+    }
+}

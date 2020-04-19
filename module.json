@@ -1,0 +1,14 @@
+{
+    "name": "Gathering",
+    "options": {
+        "niceName": "GatheringDisplay",
+        "guiName": "GatheringDisplay",
+        "settingsFile": "config.json",
+        "settingsVersion": 3
+    },
+    "author": "Shio Ramen With The Egg",
+    "description": "Shows the ores and good shit.",
+    "servers": [],
+    "supportUrl": "",
+    "version": "420.69"
+}
