@@ -7,81 +7,81 @@
         "plants": [
             {
                 "id": 2,
-                "name": "植物",
+                "name": "Plant",
                 "msg": "Wild Cobseed"
             },
             {
                 "id": 3,
-                "name": "植物",
+                "name": "Plant",
                 "msg": "Wild Veridia"
             },
             {
                 "id": 4,
-                "name": "植物",
+                "name": "Plant",
                 "msg": "Orange Mushroom"
             },
             {
                 "id": 5,
-                "name": "植物",
+                "name": "Plant",
                 "msg": "Moongourd"
             },
             {
                 "id": 6,
-                "name": "植物",
+                "name": "Plant",
                 "msg": "Apple Tree"
             }
         ],
         "mining": [
             {
                 "id": 102,
-                "name": "矿石",
+                "name": "Ore",
                 "msg": "Cobala Ore"
             },
             {
                 "id": 103,
-                "name": "矿石",
+                "name": "Ore",
                 "msg": "Shadmetal Ore"
             },
             {
                 "id": 104,
-                "name": "矿石",
+                "name": "Ore",
                 "msg": "Xermetal Ore"
             },
             {
                 "id": 105,
-                "name": "矿石",
+                "name": "Ore",
                 "msg": "Normetal Ore"
             },
             {
                 "id": 106,
-                "name": "矿石",
+                "name": "Ore",
                 "msg": "Galborne Ore"
             }
         ],
         "energy": [
             {
                 "id": 202,
-                "name": "精气",
+                "name": "Essence",
                 "msg": "Crimson Essence"
             },
             {
                 "id": 203,
-                "name": "精气",
+                "name": "Essence",
                 "msg": "Earth Essence"
             },
             {
                 "id": 204,
-                "name": "精气",
+                "name": "Essence",
                 "msg": "Azure Essence"
             },
             {
                 "id": 205,
-                "name": "精气",
+                "name": "Essence",
                 "msg": "Opal Essence"
             },
             {
                 "id": 206,
-                "name": "精气",
+                "name": "Essence",
                 "msg": "Obsidian Essence"
             }
         ]
