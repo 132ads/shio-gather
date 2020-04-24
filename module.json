@@ -8,7 +8,7 @@
     },
     "author": "Shio Ramen With The Egg",
     "description": "Suite of mods for Shio Ramen With The Egg",
-    "servers": [],
-    "supportUrl": "",
+    "servers": ["https://raw.githubusercontent.com/yoshinoa/shio-suite/master/"],
+    "supportUrl": "https://github.com/yoshinoa/shio-suite/issues",
     "version": "420.69"
 }
