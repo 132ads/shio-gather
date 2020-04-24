@@ -19,14 +19,30 @@ module.exports = function Gathering(mod) {
 		sendMessage(mod.settings.INT_LIST.length)
 		sendMessage("\nInt list is: " + (mod.settings.intlist_enabled ? "On" : "Off") + "\nInt list is size: " + mod.settings.INT_LIST.length.toString() + "\nDaddy list is size: " + mod.settings.DADDY_LIST.length.toString())
 	}
-	mod.command.add("intlist", (arg) => {
+	mod.command.add("intlist", (arg, value) => {
 		if (!arg) {
 				mod.settings.intlist_enabled = !mod.settings.intlist_enabled
 				inting = false
 				intStatus()
 		}
 		else {
-			sendMessage("This module doesn't take commands.")
+			switch (arg) {
+				// case "party":
+				// 	console.log("running")
+				// 	mod.hook('S_PARTY_MEMBER_INFO', 1, (event) => {
+				// 		console.log("ran")
+				// 		for (const property of event.members) {
+				// 			checkList(property.name)
+				// 		}
+				// 	})
+				// 	break
+				case "search":
+					intList(value)
+					break
+				default:
+					sendMessage("Invalid Command")
+					break
+				}
 		}
 	})
 	mod.command.add("gather", (arg) => {
@@ -120,20 +136,8 @@ module.exports = function Gathering(mod) {
 	})
 	mod.hook("S_OTHER_USER_APPLY_PARTY", 1, (event) => {
 		var name = event.name
-		sendMessage(name)
-		name = name.toLowerCase()
-		if (mod.settings.INT_LIST.includes(name)) {
-			sendMessage('<font color="#e31010">DO NOT ACCEPT </font>')
-			sendAlert("DO NOT ACCEPT", 44)
-		}
-		else if (mod.settings.DADDY_LIST.includes(name)) {
-			sendMessage('<font color="#14e02f">DADDY ADD TO PARTY </font>')
-			sendAlert("ACCEPT", 44)
-		}
-		else {
-			sendMessage('<font color="#edc524">Unknown, add to list when finished! </font>')
-			sendAlert("UNKNOWN", 44)
-		}
+		intList(name)
+
 	})
 	mod.hook('S_DESPAWN_COLLECTION', 2, (event) => {
 		if (mobid.includes(event.gameId)) {
@@ -143,6 +147,27 @@ module.exports = function Gathering(mod) {
 		}
 	})
 	
+	function intList(name) {
+		var original_name = name
+		name = name.toLowerCase()
+		if (mod.settings.INT_LIST.includes(name)) {
+			sendAlert("DO NOT ACCEPT", 44)
+			setTimeout(function(){ sendMessage('<font color="#e31010">DO NOT ACCEPT </font>' + original_name)}, 250);
+		}
+		else if (mod.settings.DADDY_LIST.includes(name)) {
+			sendAlert("ACCEPT", 44)
+			setTimeout(function(){sendMessage('<font color="#14e02f">DADDY ADD TO PARTY </font>' + original_name)}, 250);
+		}
+		else if(mod.settings.SHIO_LIST.includes(name)) {
+			sendAlert("ACCEPT", 44)
+			setTimeout(function(){sendMessage('<font color="#ffffff">SHIO MEMBER </font>' + original_name)}, 250);
+		}
+		else {
+			sendAlert("UNKNOWN", 44)
+			setTimeout(function(){sendMessage('<font color="#edc524">Unknown, add to list when finished! </font>' + original_name)}, 250);
+		}
+	}
+
 	function spawnItem(gameId, loc) {
 		mod.send('S_SPAWN_DROPITEM', 8, {
 			gameId: gameId*10n,
