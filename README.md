@@ -1,6 +1,6 @@
 # shio-suite
 
-suite of mods for Shio Ramen With The Egg
+suite of mods for guild
 
 ## Commands
 
