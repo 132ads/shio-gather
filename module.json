@@ -1,8 +1,8 @@
 {
     "name": "shio-suite",
     "options": {
-        "niceName": "shio-Suite",
-        "guiName": "shio-Suite",
+        "niceName": "shio-suite",
+        "guiName": "shio-suite",
         "settingsFile": "config.json",
         "settingsVersion": 3
     },
