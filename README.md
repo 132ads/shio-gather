@@ -16,4 +16,5 @@ gather ore | disable/enable ore alerts
 gather plant | disable/enable plant alerts
 gather essence | disable/enable essence alerts
 intlist | disable/enable intlist
+intlist search (name) | search for member on/off intlist
 ------
