@@ -5,19 +5,33 @@ module.exports = function Gathering(mod) {
 		plants = false,
 		mining = false,
 		energy = false,
-		egg = true
+		egg = true,
+		inting = true
 	
 	let mobid = [],
 		gatherMarker = []
 
 	function gatheringStatus() {
-		sendMessage("\nGathering: "+ (mod.settings.enabled      ? "On"   : "Off") + "\nAlerts: " + (mod.settings.sendToAlert  ? "Enabled" : "Disabled") + "\nPlants: " + (plantsMarkers ? "Visible" : "Hidden") + "\nOres: " + (miningMarkers ? "Visible" : "Hidden") + "\nEssences: " + (energyMarkers ? "Visible" : "Hidden")
-		)
+		sendMessage("\nGathering: "+ (mod.settings.gather_enabled      ? "On"   : "Off") + "\nAlerts: " + (mod.settings.sendToAlert  ? "Enabled" : "Disabled") + "\nPlants: " + (plantsMarkers ? "Visible" : "Hidden") + "\nOres: " + (miningMarkers ? "Visible" : "Hidden") + "\nEssences: " + (energyMarkers ? "Visible" : "Hidden"))
 	}
 	
+	function intStatus() {
+		sendMessage(mod.settings.INT_LIST.length)
+		sendMessage("\nInt list is: " + (mod.settings.intlist_enabled ? "On" : "Off") + "\nInt list is size: " + mod.settings.INT_LIST.length.toString() + "\nDaddy list is size: " + mod.settings.DADDY_LIST.length.toString())
+	}
+	mod.command.add("intlist", (arg) => {
+		if (!arg) {
+				mod.settings.intlist_enabled = !mod.settings.intlist_enabled
+				inting = false
+				intStatus()
+		}
+		else {
+			sendMessage("This module doesn't take commands.")
+		}
+	})
 	mod.command.add("gather", (arg) => {
 		if (!arg) {
-			mod.settings.enabled = !mod.settings.enabled
+			mod.settings.gather_enabled = !mod.settings.gather_enabled
 			if (!mod.settings.enabled) {
 				plantsMarkers = false
 				miningMarkers = false
@@ -104,7 +118,23 @@ module.exports = function Gathering(mod) {
 			mobid.push(event.gameId)
 		}
 	})
-	
+	mod.hook("S_OTHER_USER_APPLY_PARTY", 1, (event) => {
+		var name = event.name
+		sendMessage(name)
+		name = name.toLowerCase()
+		if (mod.settings.INT_LIST.includes(name)) {
+			sendMessage('<font color="#e31010">DO NOT ACCEPT </font>')
+			sendAlert("DO NOT ACCEPT", 44)
+		}
+		else if (mod.settings.DADDY_LIST.includes(name)) {
+			sendMessage('<font color="#14e02f">DADDY ADD TO PARTY </font>')
+			sendAlert("ACCEPT", 44)
+		}
+		else {
+			sendMessage('<font color="#edc524">Unknown, add to list when finished! </font>')
+			sendAlert("UNKNOWN", 44)
+		}
+	})
 	mod.hook('S_DESPAWN_COLLECTION', 2, (event) => {
 		if (mobid.includes(event.gameId)) {
 			gatherMarker = []

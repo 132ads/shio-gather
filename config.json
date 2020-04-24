@@ -1,9 +1,45 @@
 {
     "version": 3,
     "data": {
-        "enabled": true,
+        "enabled": false,
         "sendToAlert": true,
         "markerId": 88704,
+        "INT_LIST": [
+            "yaboku.yatogami",
+            "lee.haiji",
+            "clutholy",
+            "elizabeth.d",
+            "shirotenshi",
+            "qien",
+            "mariajuana",
+            "suyin.buifong",
+            "dumb.caster",
+            "beaver.jen",
+            "pika.mika",
+            "jabb",
+            "tarushi.old",
+            "elweyrin",
+            "delaur",
+            "mizuumi",
+            "iplaydota",
+            "qwertybrennt",
+            "axm",
+            "suzuee",
+            "one.autumn.leaf"
+        ],
+        "DADDY_LIST": [
+            "u.f.c",
+            "triomedei",
+            "kunizuka",
+            "fodok",
+            "visible",
+            "elyxea",
+            "ashriely",
+            "mikazuya",
+            "chances",
+            "isshiki",
+            "yuuuuuuuumi"
+        ],
         "plants": [
             {
                 "id": 2,
@@ -74,6 +110,7 @@
                 "name": "Essence",
                 "msg": "Azure Essence"
             }
-        ]
+        ],
+        "intlist_enabled": true
     }
 }

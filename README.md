@@ -1,6 +1,6 @@
-# shio-gather
+# shio-suite
 
-tera-toolbox mod that shows the ores and good shit.
+suite of mods for Shio Ramen With The Egg
 
 ## Commands
 
@@ -15,4 +15,5 @@ gather alert | disable/enable alerts
 gather ore | disable/enable ore alerts
 gather plant | disable/enable plant alerts
 gather essence | disable/enable essence alerts
+intlist | disable/enable intlist
 ------
