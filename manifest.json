@@ -1,9 +1,8 @@
 {
   "files": {
-    "index.js": "9a790e8159f4345278f3192fbc9c71b57ca9ad2b85d839a5ccf178ba36aa010a",
-    "manifest.json": "45539d11cc87c7eabc9cc1368b23ac0f8618c67b66d2c7ba1de7eca6d8be2303",
-    "module.json": "4558ac6a4d85f8ce1e9312b8ee8640a8d7745cd728d0ae7e2a8e0ca1d805d462",
-    "Newtonsoft.Json.dll": "564e6201dbf6354460d9ca180f0752d50dd7496fff49e05f67a9af42a2e772c7",
-    "README.md": "688f44d70a7d287e33b793dd1cef26a2535c303c91c54fc7823aaa5574057085"
+    "config.json": "2327968fef44043f0482c7fa6baecc28f44740dc6d6f7d3fa3c61027c0ca64bb",
+    "index.js": "0f3166533fed36545ce4df9aa4b9498b15a0f376eede61a5375332f9b6e266b7",
+    "README.md": "f8d1ee25551a0b83746e368147ed9c46ff2cd6bde9610e5eb1ac35ff65477529",
+    "settings_migrator.js": "14e8f369e2f344f1ae67702a1cc2b45517411835ce2fd1347f3760e6b833fa29"
   }
 }
